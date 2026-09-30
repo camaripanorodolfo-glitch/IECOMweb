@@ -25,7 +25,7 @@
 			</nav>
 		</header>
 
-		<!-- SECCIÓN PRINCIPAL (HERO) -->
+		<!-- SECCIÓN PRINCIPAL (HERO) CON EFECTO VISIBLE DE FONDO -->
 		<section class="hero">
 			<div class="hero-content">
 				<span class="sub-title">28 AÑOS DE TRAYECTORIA · PÁRAMO MERIDEÑO</span>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="value-item">
 					<h3>3. Innovación con Propósito</h3>
-					<p>Evolucionamos e invertimos constantemente en infraestructura de vanguardia no por moda, sino porque sabemos que una mejor conectividad impulsa la educación, el trabajo y el progreso de la región.</p>
+					<p>Evolucionamos e invertimos constantemente en infraestructura de vanguardia no por moda, sino porque sabemos que una mejor conectividad impulsa la educación, the trabajo y el progreso de la región.</p>
 				</div>
 				<div class="value-item">
 					<h3>4. Excelencia y Agilidad Operativa</h3>
@@ -84,7 +84,7 @@
 </html>
 
 <style>
-	/* Colores base inspirados estrictamente en la identidad del logo (Azul corporativo e isotipo, acentos en naranja) */
+	/* Colores base inspirados estrictamente en la identidad del logo */
 	:root {
 		--bg-main: #0B192C;       /* Azul oscuro profundo institucional */
 		--bg-card: #1E3E62;       /* Azul secundario más claro para contraste en tarjetas */
@@ -144,19 +144,20 @@
 		color: var(--accent-orange);
 	}
 
-	/* Sección Hero con la imagen corporativa integrada armónicamente */
+	/* Sección Hero optimizada: Degradado lateral suave para ver la imagen de fondo */
 	.hero {
 		height: 90vh;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		background: linear-gradient(135deg, rgba(11, 25, 44, 0.92) 0%, rgba(30, 62, 98, 0.85) 100%), url('/images.png') no-repeat center center/cover;
+		/* Degradado lateral: oscuro solo a la izquierda para el texto, transparente a la derecha para ver la fibra */
+		background: linear-gradient(90deg, rgba(11, 25, 44, 0.92) 0%, rgba(11, 25, 44, 0.75) 50%, rgba(11, 25, 44, 0.3) 100%), url('/images.png') no-repeat center center/cover;
 		margin-top: 70px;
 		border-bottom: 3px solid var(--accent-orange);
 	}
 
 	.hero-content {
-		max-width: 750px;
+		max-width: 700px;
 	}
 
 	.sub-title {
@@ -175,13 +176,15 @@
 		margin-bottom: 20px;
 		font-weight: 700;
 		color: var(--text-light);
+		text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 	}
 
 	.hero-content p {
 		font-size: 16px;
-		color: var(--text-muted);
+		color: #e2e8f0;
 		margin-bottom: 30px;
 		line-height: 1.6;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 	}
 
 	.btn-cta {
@@ -281,17 +284,4 @@
 
 	.value-item p {
 		font-size: 14px;
-		line-height: 1.6;
-		color: var(--text-muted);
-	}
-
-    /* Pie de página */
-	footer {
-		text-align: center;
-		padding: 30px;
-		background-color: #070e18;
-		color: var(--text-muted);
-		font-size: 14px;
-		border-top: 1px solid rgba(255, 255, 255, 0.05);
-	}
-</style>
+...
