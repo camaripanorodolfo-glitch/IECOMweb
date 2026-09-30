@@ -1,0 +1,14 @@
+{
+  "name": "iecom-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "type": "module",
+  "dependencies": {
+    "astro": "^7.3.5"
+  }
+}
