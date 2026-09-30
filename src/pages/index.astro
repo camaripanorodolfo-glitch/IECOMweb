@@ -1,11 +1,177 @@
 ---
+// Aquí puedes importar componentes si los necesitas más adelante
 ---
+
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>IECOM</title>
-  </head>
-  <body>
-    <h1>Hola, Astro</h1>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IECOM - Conectando el futuro</title>
+	</head>
+	<body>
+		<!-- BARRA DE NAVEGACIÓN -->
+		<header class="navbar">
+			<div class="logo">
+				<h1>IECOM</h1>
+			</div>
+			<nav class="nav-links">
+				<a href="#" class="active">Inicio</a>
+				<a href="#">Catálogo de Productos</a>
+				<a href="#">Energía Solar</a>
+				<a href="#">Servicios</a>
+				<a href="#">Nosotros</a>
+				<a href="#">Contactos</a>
+			</nav>
+		</header>
+
+		<!-- SECCIÓN PRINCIPAL (HERO) -->
+		<section class="hero">
+			<div class="hero-content">
+				<span class="sub-title">TELECOMUNICACIONES · ENERGÍA SOLAR</span>
+				<h1>Conectando más personas a un mundo inteligente</h1>
+				<p>Suministramos fibra óptica, accesorios de red y soluciones de energía solar para proyectos de telecomunicaciones en Venezuela y Latinoamérica.</p>
+				<a href="#" class="btn-cta">Haz clic aquí</a>
+			</div>
+		</section>
+
+		<!-- SECCIÓN QUIÉNES SOMOS -->
+		<section class="about">
+			<div class="about-container">
+				<h2>¿Quiénes Somos?</h2>
+				<p>
+					IECOM conecta tecnología, infraestructura y conocimiento para impulsar el desarrollo digital de empresas y comunidades. Transformamos desafíos tecnológicos en proyectos confiables, eficientes y preparados para el futuro. Con una sólida experiencia en telecomunicaciones, fibra óptica, infraestructura tecnológica y energía solar, acompañamos a nuestros clientes en el diseño e implementación de soluciones que fortalecen su conectividad y generan valor sostenible.
+				</p>
+			</div>
+		</section>
+	</body>
 </html>
+
+<style>
+	/* Estilos generales y reseteo básico */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+
+	body {
+		background-color: #0d1117;
+		color: #ffffff;
+	}
+
+	/* Barra de Navegación */
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 5%;
+		background-color: rgba(13, 17, 23, 0.95);
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+	.logo h1 {
+		color: #ffffff;
+		font-size: 24px;
+		letter-spacing: 2px;
+		font-weight: bold;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 25px;
+	}
+
+	.nav-links a {
+		color: #b0b3b8;
+		text-decoration: none;
+		font-size: 15px;
+		transition: color 0.3s ease;
+	}
+
+	.nav-links a:hover, .nav-links a.active {
+		color: #ffffff;
+	}
+
+	/* Sección Hero (Portada con fondo oscuro/tecnológico) */
+	.hero {
+		height: 90vh;
+		display: flex;
+		align-items: center;
+		padding: 0 10%;
+		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+		margin-top: 60px;
+	}
+
+	.hero-content {
+		max-width: 700px;
+	}
+
+	.sub-title {
+		font-size: 13px;
+		letter-spacing: 2px;
+		color: #00d2ff;
+		text-transform: uppercase;
+		display: block;
+		margin-bottom: 15px;
+		font-weight: bold;
+	}
+
+	.hero-content h1 {
+		font-size: 45px;
+		line-height: 1.2;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+
+	.hero-content p {
+		font-size: 16px;
+		color: #d1d5db;
+		margin-bottom: 30px;
+		line-height: 1.6;
+	}
+
+	.btn-cta {
+		display: inline-block;
+		background-color: #ff4742;
+		color: white;
+		padding: 12px 28px;
+		border-radius: 4px;
+		text-decoration: none;
+		font-weight: bold;
+		transition: background 0.3s ease;
+	}
+
+	.btn-cta:hover {
+		background-color: #e03e3a;
+	}
+
+	/* Sección Quiénes Somos */
+	.about {
+		padding: 80px 10%;
+		background-color: #161b22;
+	}
+
+	.about-container {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.about h2 {
+		font-size: 32px;
+		margin-bottom: 25px;
+		border-left: 4px solid #00d2ff;
+		padding-left: 15px;
+	}
+
+	.about p {
+		font-size: 16px;
+		line-height: 1.8;
+		color: #9ca3af;
+	}
+</style>
