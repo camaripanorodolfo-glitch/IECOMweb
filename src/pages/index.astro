@@ -1,5 +1,5 @@
 ---
-// Aquí puedes importar componentes si los necesitas más adelante
+// Código de configuración si fuera necesario
 ---
 
 <html lang="es">
@@ -7,48 +7,83 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>IECOM - Conectando el futuro</title>
+		<title>IECOM - Telecomunicaciones C.A.</title>
 	</head>
 	<body>
 		<!-- BARRA DE NAVEGACIÓN -->
 		<header class="navbar">
-			<div class="logo">
-				<h1>IECOM</h1>
+			<div class="logo-container">
+				<!-- Aquí colocamos tu logo oficial -->
+				<img src="/logoiecom.png" alt="IECOM Telecomunicaciones C.A." class="nav-logo" />
 			</div>
 			<nav class="nav-links">
 				<a href="#" class="active">Inicio</a>
-				<a href="#">Catálogo de Productos</a>
-				<a href="#">Energía Solar</a>
+				<a href="#mision-vision">Misión y Visión</a>
+				<a href="#valores">Valores</a>
 				<a href="#">Servicios</a>
-				<a href="#">Nosotros</a>
 				<a href="#">Contactos</a>
 			</nav>
 		</header>
 
-		<!-- SECCIÓN PRINCIPAL (HERO) -->
+		<!-- SECCIÓN PRINCIPAL (HERO) CON TU IMAGEN DE FONDO -->
 		<section class="hero">
 			<div class="hero-content">
-				<span class="sub-title">TELECOMUNICACIONES · ENERGÍA SOLAR</span>
-				<h1>Conectando más personas a un mundo inteligente</h1>
-				<p>Suministramos fibra óptica, accesorios de red y soluciones de energía solar para proyectos de telecomunicaciones en Venezuela y Latinoamérica.</p>
-				<a href="#" class="btn-cta">Haz clic aquí</a>
+				<span class="sub-title">28 AÑOS DE TRAYECTORIA · PÁRAMO MERIDEÑO</span>
+				<h1>Conectando el páramo y la región andina con el mundo</h1>
+				<p>Lercamos soluciones integrales de internet y entretenimiento de alta calidad hasta el último rincón de nuestra región, combinando innovación y un trato humano cercano.</p>
+				<a href="#mision-vision" class="btn-cta">Conócenos más</a>
 			</div>
 		</section>
 
-		<!-- SECCIÓN QUIÉNES SOMOS -->
-		<section class="about">
-			<div class="about-container">
-				<h2>¿Quiénes Somos?</h2>
-				<p>
-					IECOM conecta tecnología, infraestructura y conocimiento para impulsar el desarrollo digital de empresas y comunidades. Transformamos desafíos tecnológicos en proyectos confiables, eficientes y preparados para el futuro. Con una sólida experiencia en telecomunicaciones, fibra óptica, infraestructura tecnológica y energía solar, acompañamos a nuestros clientes en el diseño e implementación de soluciones que fortalecen su conectividad y generan valor sostenible.
-				</p>
+		<!-- SECCIÓN MISIÓN Y VISIÓN -->
+		<section id="mision-vision" class="mission-vision">
+			<div class="mv-container">
+				<div class="mv-card">
+					<h2>Misión</h2>
+					<p>Impulsar el desarrollo de nuestra comunidad llevando soluciones integrales de internet y entretenimiento de alta calidad hasta el último rincón del páramo merideño. Respaldados por 28 años de trayectoria, combinamos innovación tecnológica, redes de alta calidad y un trato humano cercano para ser la red confiable que une al páramo y la región andina con el mundo[cite: 5].</p>
+				</div>
+				<div class="mv-card">
+					<h2>Visión</h2>
+					<p>Ser el referente de conectividad e innovación tecnológica en el eje andino, transformando la vida digital de las personas y acelerando el progreso económico de la región mediante una infraestructura de vanguardia y la mejor experiencia de servicio[cite: 5].</p>
+				</div>
 			</div>
 		</section>
+
+		<!-- SECCIÓN VALORES -->
+		<section id="valores" class="values-section">
+			<h2>Nuestros Valores</h2>
+			<div class="values-grid">
+				<div class="value-item">
+					<h3>1. Compromiso Humano y Cercanía</h3>
+					<p>No solo instalamos conexiones; construimos relaciones. Nos caracteriza la empatía, el trato amable y la vocación genuina de resolver con calidez y agilidad las necesidades de nuestra gente y nuestra comunidad[cite: 5].</p>
+				</div>
+				<div class="value-item">
+					<h3>2. Confiabilidad y Solidez</h3>
+					<p>Respaldados por casi tres décadas de experiencia, entregamos un servicio estable y seguro. Cumplimos lo que prometemos, siendo la red en la que los hogares y empresas del páramo confían para su vida diaria[cite: 5].</p>
+				</div>
+				<div class="value-item">
+					<h3>3. Innovación con Propósito</h3>
+					<p>Evolucionamos e invertimos constantemente en infraestructura de vanguardia no por moda, sino porque sabemos que una mejor conectividad impulsa la educación, el trabajo y el progreso de la región[cite: 5].</p>
+				</div>
+				<div class="value-item">
+					<h3>4. Excelencia y Agilidad Operativa</h3>
+					<p>Nos exigimos la máxima calidad en cada despliegue técnico y mantenimiento de red. Respondemos con rapidez, precisión y profesionalismo para mantener al eje andino siempre conectado[cite: 5].</p>
+				</div>
+				<div class="value-item full-width">
+					<h3>5. Orgullo Local</h3>
+					<p>Nacimos en el corazón del páramo merideño. Somos parte del tejido social y económico de nuestra tierra. Reinvertimos nuestro esfuerzo en promover el talento, la cultura, el deporte y el crecimiento integral de las comunidades que nos han visto crecer[cite: 5].</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- PIE DE PÁGINA -->
+		<footer>
+			<p>&copy; 2026 IECOM Telecomunicaciones C.A. Todos los derechos reservados.</p>
+		</footer>
 	</body>
 </html>
 
 <style>
-	/* Estilos generales y reseteo básico */
 	* {
 		margin: 0;
 		padding: 0;
@@ -59,6 +94,7 @@
 	body {
 		background-color: #0d1117;
 		color: #ffffff;
+		scroll-behavior: smooth;
 	}
 
 	/* Barra de Navegación */
@@ -66,7 +102,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20px 5%;
+		padding: 15px 5%;
 		background-color: rgba(13, 17, 23, 0.95);
 		position: fixed;
 		width: 100%;
@@ -75,11 +111,10 @@
 		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
-	.logo h1 {
-		color: #ffffff;
-		font-size: 24px;
-		letter-spacing: 2px;
-		font-weight: bold;
+	.nav-logo {
+		height: 45px; /* Ajusta la altura de tu logo en el menú */
+		width: auto;
+		object-fit: contain;
 	}
 
 	.nav-links {
@@ -95,21 +130,22 @@
 	}
 
 	.nav-links a:hover, .nav-links a.active {
-		color: #ffffff;
+		color: #00d2ff;
 	}
 
-	/* Sección Hero (Portada con fondo oscuro/tecnológico) */
+	/* Sección Hero con tu imagen de fondo personalizada */
 	.hero {
-		height: 90vh;
+		height: 95vh;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
-		margin-top: 60px;
+		/* Usamos tu imagen 'images.jpg' cargada en la carpeta public como fondo con un filtro oscuro encima */
+		background: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.85)), url('/images.jpg') no-repeat center center/cover;
+		margin-top: 70px;
 	}
 
 	.hero-content {
-		max-width: 700px;
+		max-width: 750px;
 	}
 
 	.sub-title {
@@ -123,7 +159,7 @@
 	}
 
 	.hero-content h1 {
-		font-size: 45px;
+		font-size: 42px;
 		line-height: 1.2;
 		margin-bottom: 20px;
 		font-weight: 700;
@@ -138,7 +174,7 @@
 
 	.btn-cta {
 		display: inline-block;
-		background-color: #ff4742;
+		background-color: #ff6600; /* Color naranja característico del logo */
 		color: white;
 		padding: 12px 28px;
 		border-radius: 4px;
@@ -148,30 +184,94 @@
 	}
 
 	.btn-cta:hover {
-		background-color: #e03e3a;
+		background-color: #e55c00;
 	}
 
-	/* Sección Quiénes Somos */
-	.about {
+	/* Sección Misión y Visión */
+	.mission-vision {
 		padding: 80px 10%;
 		background-color: #161b22;
 	}
 
-	.about-container {
-		max-width: 900px;
+	.mv-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 40px;
+		max-width: 1100px;
 		margin: 0 auto;
 	}
 
-	.about h2 {
-		font-size: 32px;
-		margin-bottom: 25px;
-		border-left: 4px solid #00d2ff;
-		padding-left: 15px;
+	.mv-card {
+		background-color: #0d1117;
+		padding: 35px;
+		border-radius: 8px;
+		border-top: 4px solid #00d2ff;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 	}
 
-	.about p {
-		font-size: 16px;
-		line-height: 1.8;
+	.mv-card h2 {
+		font-size: 24px;
+		margin-bottom: 15px;
+		color: #ffffff;
+	}
+
+	.mv-card p {
+		font-size: 15px;
+		line-height: 1.7;
 		color: #9ca3af;
+	}
+
+	/* Sección Valores */
+	.values-section {
+		padding: 80px 10%;
+		background-color: #0d1117;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.values-section h2 {
+		text-align: center;
+		font-size: 32px;
+		margin-bottom: 50px;
+		color: #ffffff;
+	}
+
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 25px;
+	}
+
+	.value-item {
+		background-color: #161b22;
+		padding: 25px;
+		border-radius: 8px;
+		border-left: 3px solid #ff6600;
+	}
+
+	.value-item.full-width {
+		grid-column: 1 / -1;
+	}
+
+	.value-item h3 {
+		font-size: 18px;
+		margin-bottom: 10px;
+		color: #ffffff;
+	}
+
+	.value-item p {
+		font-size: 14px;
+		line-height: 1.6;
+		color: #9ca3af;
+	}
+
+	/* Pie de página */
+	footer {
+		text-align: center;
+		padding: 30px;
+		background-color: #090d12;
+		color: #6b7280;
+		font-size: 14px;
+		border-top: 1px solid rgba(255,255,255,0.05);
 	}
 </style>
