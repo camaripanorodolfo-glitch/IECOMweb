@@ -13,7 +13,7 @@
 		<!-- BARRA DE NAVEGACIÓN -->
 		<header class="navbar">
 			<div class="logo-container">
-				<!-- Aquí colocamos tu logo oficial -->
+				<!-- Logo oficial -->
 				<img src="/logoiecom2.png" alt="IECOM Telecomunicaciones C.A." class="nav-logo" />
 			</div>
 			<nav class="nav-links">
@@ -25,12 +25,13 @@
 			</nav>
 		</header>
 
-		<!-- SECCIÓN PRINCIPAL (HERO) CON TU IMAGEN DE FONDO -->
+		<!-- SECCIÓN PRINCIPAL (HERO) - DISEÑO CLARO Y CORPORATIVO -->
 		<section class="hero">
+			<div class="hero-overlay"></div>
 			<div class="hero-content">
 				<span class="sub-title">28 AÑOS DE TRAYECTORIA · PÁRAMO MERIDEÑO</span>
 				<h1>Conectando el páramo y la región andina con el mundo</h1>
-				<p>Lercamos soluciones integrales de internet y entretenimiento de alta calidad hasta el último rincón de nuestra región, combinando innovación y un trato humano cercano.</p>
+				<p>Llevamos soluciones integrales de internet y entretenimiento de alta calidad hasta el último rincón de nuestra región, combinando innovación y un trato humano cercano.</p>
 				<a href="#mision-vision" class="btn-cta">Conócenos más</a>
 			</div>
 		</section>
@@ -92,27 +93,28 @@
 	}
 
 	body {
-		background-color: #0d1117;
-		color: #ffffff;
+		background-color: #f4f6f9; /* Fondo general claro y limpio estilo corporativo */
+		color: #333333; /* Texto principal oscuro para alta legibilidad */
 		scroll-behavior: smooth;
 	}
 
-	/* Barra de Navegación */
+	/* Barra de Navegación Clara */
 	.navbar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 15px 5%;
-		background-color: rgba(13, 17, 23, 0.95);
+		background-color: #ffffff;
 		position: fixed;
 		width: 100%;
 		top: 0;
 		z-index: 1000;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+		border-bottom: 1px solid #e5e7eb;
 	}
 
 	.nav-logo {
-		height: 45px; /* Ajusta la altura de tu logo en el menú */
+		height: 45px;
 		width: auto;
 		object-fit: contain;
 	}
@@ -123,35 +125,49 @@
 	}
 
 	.nav-links a {
-		color: #b0b3b8;
+		color: #4b5563;
 		text-decoration: none;
 		font-size: 15px;
+		font-weight: 500;
 		transition: color 0.3s ease;
 	}
 
 	.nav-links a:hover, .nav-links a.active {
-		color: #00d2ff;
+		color: #0056b3; /* Azul corporativo */
 	}
 
-	/* Sección Hero con tu imagen de fondo personalizada */
+	/* Sección Hero con fondo claro y elegante */
 	.hero {
-		height: 95vh;
+		height: 90vh;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		/* Usamos tu imagen 'images.jpg' cargada en la carpeta public como fondo con un filtro oscuro encima */
-		background: linear-gradient(rgba(13, 17, 23, 0.75), rgba(13, 17, 23, 0.85)), url('/images.png') no-repeat center center/cover;
+		position: relative;
+		/* Imagen de fondo con capa blanca translúcida para que se vea luminosa */
+		background: url('/images.png') no-repeat center center/cover;
 		margin-top: 70px;
 	}
 
+	.hero-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(240, 244, 248, 0.88) 100%);
+		z-index: 1;
+	}
+
 	.hero-content {
+		position: relative;
+		z-index: 2;
 		max-width: 750px;
 	}
 
 	.sub-title {
 		font-size: 13px;
 		letter-spacing: 2px;
-		color: #00d2ff;
+		color: #0056b3;
 		text-transform: uppercase;
 		display: block;
 		margin-bottom: 15px;
@@ -163,34 +179,36 @@
 		line-height: 1.2;
 		margin-bottom: 20px;
 		font-weight: 700;
+		color: #1f2937;
 	}
 
 	.hero-content p {
 		font-size: 16px;
-		color: #d1d5db;
+		color: #4b5563;
 		margin-bottom: 30px;
 		line-height: 1.6;
 	}
 
 	.btn-cta {
 		display: inline-block;
-		background-color: #ff6600; /* Color naranja característico del logo */
+		background-color: #ff6600; /* Naranja corporativo */
 		color: white;
 		padding: 12px 28px;
 		border-radius: 4px;
 		text-decoration: none;
 		font-weight: bold;
 		transition: background 0.3s ease;
+		box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
 	}
 
 	.btn-cta:hover {
 		background-color: #e55c00;
 	}
 
-	/* Sección Misión y Visión */
+	/* Sección Misión y Visión (Tarjetas blancas sobre fondo claro) */
 	.mission-vision {
 		padding: 80px 10%;
-		background-color: #161b22;
+		background-color: #ffffff;
 	}
 
 	.mv-container {
@@ -202,29 +220,32 @@
 	}
 
 	.mv-card {
-		background-color: #0d1117;
+		background-color: #f9fafb;
 		padding: 35px;
 		border-radius: 8px;
-		border-top: 4px solid #00d2ff;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+		border-top: 4px solid #0056b3;
+		border-left: 1px solid #e5e7eb;
+		border-right: 1px solid #e5e7eb;
+		border-bottom: 1px solid #e5e7eb;
+		box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 	}
 
 	.mv-card h2 {
 		font-size: 24px;
 		margin-bottom: 15px;
-		color: #ffffff;
+		color: #1f2937;
 	}
 
 	.mv-card p {
 		font-size: 15px;
 		line-height: 1.7;
-		color: #9ca3af;
+		color: #4b5563;
 	}
 
 	/* Sección Valores */
 	.values-section {
 		padding: 80px 10%;
-		background-color: #0d1117;
+		background-color: #f4f6f9;
 		max-width: 1200px;
 		margin: 0 auto;
 	}
@@ -233,7 +254,7 @@
 		text-align: center;
 		font-size: 32px;
 		margin-bottom: 50px;
-		color: #ffffff;
+		color: #1f2937;
 	}
 
 	.values-grid {
@@ -243,10 +264,14 @@
 	}
 
 	.value-item {
-		background-color: #161b22;
+		background-color: #ffffff;
 		padding: 25px;
 		border-radius: 8px;
-		border-left: 3px solid #ff6600;
+		border-left: 4px solid #ff6600;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+		border-top: 1px solid #e5e7eb;
+		border-right: 1px solid #e5e7eb;
+		border-bottom: 1px solid #e5e7eb;
 	}
 
 	.value-item.full-width {
@@ -256,22 +281,22 @@
 	.value-item h3 {
 		font-size: 18px;
 		margin-bottom: 10px;
-		color: #ffffff;
+		color: #1f2937;
 	}
 
 	.value-item p {
 		font-size: 14px;
 		line-height: 1.6;
-		color: #9ca3af;
+		color: #4b5563;
 	}
 
 	/* Pie de página */
 	footer {
 		text-align: center;
 		padding: 30px;
-		background-color: #090d12;
-		color: #6b7280;
+		background-color: #e5e7eb;
+		color: #4b5563;
 		font-size: 14px;
-		border-top: 1px solid rgba(255,255,255,0.05);
+		border-top: 1px solid #d1d5db;
 	}
 </style>
