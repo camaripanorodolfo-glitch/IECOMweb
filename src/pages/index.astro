@@ -25,7 +25,7 @@
 			</nav>
 		</header>
 
-		<!-- SECCIÓN PRINCIPAL (HERO) CON EFECTO VISIBLE DE FONDO -->
+		<!-- SECCIÓN PRINCIPAL (HERO) -->
 		<section class="hero">
 			<div class="hero-content">
 				<span class="sub-title">28 AÑOS DE TRAYECTORIA · PÁRAMO MERIDEÑO</span>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="value-item">
 					<h3>3. Innovación con Propósito</h3>
-					<p>Evolucionamos e invertimos constantemente en infraestructura de vanguardia no por moda, sino porque sabemos que una mejor conectividad impulsa la educación, the trabajo y el progreso de la región.</p>
+					<p>Evolucionamos e invertimos constantemente en infraestructura de vanguardia no por moda, sino porque sabemos que una mejor conectividad impulsa la educación, el trabajo y el progreso de la región.</p>
 				</div>
 				<div class="value-item">
 					<h3>4. Excelencia y Agilidad Operativa</h3>
@@ -144,20 +144,19 @@
 		color: var(--accent-orange);
 	}
 
-	/* Sección Hero optimizada: Degradado lateral suave para ver la imagen de fondo */
+	/* Sección Hero con fondo neutro calibrado para ver la imagen de la fibra */
 	.hero {
 		height: 90vh;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		/* Degradado lateral: oscuro solo a la izquierda para el texto, transparente a la derecha para ver la fibra */
-		background: linear-gradient(90deg, rgba(15, 15, 15, 0.90) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.2) 100%), url('/images.png') no-repeat center center/cover;
+		background: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/images.png') no-repeat center center/cover;
 		margin-top: 70px;
 		border-bottom: 3px solid var(--accent-orange);
 	}
 
 	.hero-content {
-		max-width: 700px;
+		max-width: 750px;
 	}
 
 	.sub-title {
@@ -176,15 +175,15 @@
 		margin-bottom: 20px;
 		font-weight: 700;
 		color: var(--text-light);
-		text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+		text-shadow: 0 2px 4px rgba(0,0,0,0.4);
 	}
 
 	.hero-content p {
 		font-size: 16px;
-		color: #e2e8f0;
+		color: var(--text-muted);
 		margin-bottom: 30px;
 		line-height: 1.6;
-		text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+		text-shadow: 0 1px 3px rgba(0,0,0,0.4);
 	}
 
 	.btn-cta {
@@ -284,4 +283,17 @@
 
 	.value-item p {
 		font-size: 14px;
-...
+		line-height: 1.6;
+		color: var(--text-muted);
+	}
+
+    /* Pie de página */
+	footer {
+		text-align: center;
+		padding: 30px;
+		background-color: #070e18;
+		color: var(--text-muted);
+		font-size: 14px;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+</style>
