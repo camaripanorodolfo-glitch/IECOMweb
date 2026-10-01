@@ -10,17 +10,6 @@
 		<title>IECOM - Telecomunicaciones C.A.</title>
 	</head>
 	<body>
-		<!-- BARRA SUPERIOR DE CONTACTO -->
-		<div class="top-bar">
-			<div class="top-bar-content">
-				<span>📍 Av. Carabobo, Mucuchíes 5130, Mérida, Venezuela</span>
-				<div class="top-bar-links">
-					<a href="tel:+584127868304">📞 +58 412-7868304</a>
-					<a href="mailto:iecomadm@gmail.com">✉️ iecomadm@gmail.com</a>
-				</div>
-			</div>
-		</div>
-
 		<!-- BARRA DE NAVEGACIÓN -->
 		<header class="navbar">
 			<div class="logo-container">
@@ -90,18 +79,19 @@
 		<footer id="contacto">
 			<div class="footer-content">
 				<div class="footer-col">
-					<h3>IECOM Telecomunicaciones C.A.</h3>
+					<h3>IECOM C.A.</h3>
+					<p><strong>RIF:</strong> J-306166580</p>
 					<p>Conectando el páramo y la región andina con el mundo desde el corazón de Mucuchíes.</p>
 				</div>
 				<div class="footer-col">
 					<h3>Contacto Directo</h3>
 					<p>📞 Teléfono: <a href="tel:+584127868304">+58 412-7868304</a></p>
 					<p>✉️ Correo: <a href="mailto:iecomadm@gmail.com">iecomadm@gmail.com</a></p>
-					<p>📍 Dirección: Av. Carabobo, Mucuchíes 5130, Mérida, Venezuela</p>
+					<p>📍 Dirección: Av. Carabobo, C.C. San Benito, Nivel 2, Local 06, Sector Mucuchíes, Mérida, Venezuela[cite: 6].</p>
 				</div>
 			</div>
 			<div class="footer-bottom">
-				<p>&copy; 2026 IECOM Telecomunicaciones C.A. Todos los derechos reservados.</p>
+				<p>&copy; 2026 IECOM C.A. Todos los derechos reservados.</p>
 			</div>
 		</footer>
 	</body>
@@ -130,61 +120,23 @@
 		scroll-behavior: smooth;
 	}
 
-	/* Barra Superior de Contacto */
-	.top-bar {
-		background-color: #070e18;
-		color: var(--text-muted);
-		font-size: 13px;
-		padding: 8px 5%;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		position: fixed;
-		width: 100%;
-		top: 0;
-		z-index: 1001;
-	}
-
-	.top-bar-content {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 10px;
-		max-width: 1200px;
-		margin: 0 auto;
-	}
-
-	.top-bar-links {
-		display: flex;
-		gap: 20px;
-	}
-
-	.top-bar-links a {
-		color: var(--text-muted);
-		text-decoration: none;
-		transition: color 0.3s ease;
-	}
-
-	.top-bar-links a:hover {
-		color: var(--accent-orange);
-	}
-
 	/* Barra de Navegación */
 	.navbar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 12px 5%;
+		padding: 15px 5%;
 		background-color: rgba(11, 25, 44, 0.95);
 		position: fixed;
 		width: 100%;
-		top: 36px; /* Se ajusta debajo de la barra superior */
+		top: 0;
 		z-index: 1000;
 		backdrop-filter: blur(8px);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	.nav-logo {
-		height: 42px;
+		height: 45px;
 		width: auto;
 		object-fit: contain;
 	}
@@ -213,7 +165,7 @@
 		align-items: center;
 		padding: 0 10%;
 		background: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/images.png') no-repeat center center/cover;
-		margin-top: 106px; /* Ajustado por la barra superior y la nav */
+		margin-top: 75px;
 		border-bottom: 3px solid var(--accent-orange);
 	}
 
@@ -394,19 +346,5 @@
 		padding-top: 20px;
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		font-size: 13px;
-	}
-
-	/* Diseño Responsivo para móviles */
-	@media (max-width: 768px) {
-		.top-bar-content {
-			flex-direction: column;
-			text-align: center;
-		}
-		.navbar {
-			top: 60px;
-		}
-		.hero {
-			margin-top: 120px;
-		}
 	}
 </style>
