@@ -24,8 +24,18 @@
 			</nav>
 		</header>
 
-		<!-- SECCIÓN PRINCIPAL (HERO) -->
+		<!-- SECCIÓN PRINCIPAL (HERO) CON CARRUSEL -->
 		<section class="hero">
+			<!-- Contenedor de las imágenes del carrusel (puedes agregar más cambiando las rutas en la carpeta public) -->
+			<div class="carousel-container">
+				<div class="carousel-slide active" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/Técnico trabajando en líneas aéreas.png');"></div>
+				<!-- Ejemplo de cómo agregar más imágenes en el futuro:
+				<div class="carousel-slide" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/9b3f20cb-e69b-4856-bf21-bb0d9b33aae4.png');"></div> 
+				<div class="carousel-slide" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/Conectividad brillante en el vecindario.png');"></div> 
+                <div class="carousel-slide" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/images2.png');"></div>
+                -->
+			</div>
+
 			<div class="hero-content">
 				<span class="sub-title">28 AÑOS DE TRAYECTORIA · PÁRAMO MERIDEÑO</span>
 				<h1>Conectando el páramo y la región andina con el mundo</h1>
@@ -94,6 +104,25 @@
 				<p>&copy; 2026 IECOM C.A. Todos los derechos reservados.</p>
 			</div>
 		</footer>
+
+		<!-- SCRIPT PARA EL CARRUSEL -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				const slides = document.querySelectorAll('.carousel-slide');
+				let currentSlide = 0;
+				const intervalTime = 5000; // Cambia de imagen cada 5 segundos
+
+				function nextSlide() {
+					slides[currentSlide].classList.remove('active');
+					currentSlide = (currentSlide + 1) % slides.length;
+					slides[currentSlide].classList.add('active');
+				}
+
+				if(slides.length > 1) {
+					setInterval(nextSlide, intervalTime);
+				}
+			});
+		</script>
 	</body>
 </html>
 
@@ -158,18 +187,46 @@
 		color: var(--accent-orange);
 	}
 
-	/* Sección Hero con fondo neutro calibrado para ver la imagen de la fibra */
+	/* Sección Hero con soporte para Carrusel */
 	.hero {
 		height: 90vh;
+		position: relative;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		background: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/images.png') no-repeat center center/cover;
 		margin-top: 75px;
 		border-bottom: 3px solid var(--accent-orange);
+		overflow: hidden;
+	}
+
+	.carousel-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	.carousel-slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+		opacity: 0;
+		transition: opacity 1.5s ease-in-out;
+	}
+
+	.carousel-slide.active {
+		opacity: 1;
 	}
 
 	.hero-content {
+		position: relative;
+		z-index: 2;
 		max-width: 750px;
 	}
 
