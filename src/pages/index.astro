@@ -10,12 +10,17 @@
 		<title>IECOM - Telecomunicaciones C.A.</title>
 	</head>
 	<body>
-		<!-- BARRA DE NAVEGACIÓN -->
+		<!-- BARRA DE NAVEGACIÓN CON MENÚ MÓVIL -->
 		<header class="navbar">
 			<div class="logo-container">
-				<!-- Logo oficial -->
 				<img src="/logoiecom2.png" alt="IECOM Telecomunicaciones C.A." class="nav-logo" />
 			</div>
+			<!-- Botón hamburguesa para celulares -->
+			<button class="menu-toggle" aria-label="Abrir menú">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
 			<nav class="nav-links">
 				<a href="#" class="active">Inicio</a>
 				<a href="#mision-vision">Misión y Visión</a>
@@ -26,7 +31,6 @@
 
 		<!-- SECCIÓN PRINCIPAL (HERO) CON CARRUSEL -->
 		<section class="hero">
-			<!-- Contenedor de las imágenes del carrusel -->
 			<div class="carousel-container">
 				<div class="carousel-slide active" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/Técnico trabajando en líneas aéreas.png');"></div>
 				<div class="carousel-slide" style="background-image: linear-gradient(90deg, rgba(15, 15, 15, 0.92) 0%, rgba(15, 15, 15, 0.70) 50%, rgba(15, 15, 15, 0.15) 100%), url('/9b3f20cb-e69b-4856-bf21-bb0d9b33aae4.png');"></div> 
@@ -103,12 +107,13 @@
 			</div>
 		</footer>
 
-		<!-- SCRIPT PARA EL CARRUSEL -->
+		<!-- SCRIPT PARA EL CARRUSEL Y MENÚ MÓVIL -->
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
+				// Carrusel
 				const slides = document.querySelectorAll('.carousel-slide');
 				let currentSlide = 0;
-				const intervalTime = 5000; // Cambia de imagen cada 5 segundos
+				const intervalTime = 5000;
 
 				function nextSlide() {
 					slides[currentSlide].classList.remove('active');
@@ -119,19 +124,33 @@
 				if(slides.length > 1) {
 					setInterval(nextSlide, intervalTime);
 				}
+
+				// Menú Hamburguesa para móviles
+				const menuToggle = document.querySelector('.menu-toggle');
+				const navLinks = document.querySelector('.nav-links');
+
+				menuToggle.addEventListener('click', function() {
+					navLinks.classList.toggle('active');
+				});
+
+				// Cerrar menú al hacer clic en un enlace en móviles
+				document.querySelectorAll('.nav-links a').forEach(link => {
+					link.addEventListener('click', () => {
+						navLinks.classList.remove('active');
+					});
+				});
 			});
 		</script>
 	</body>
 </html>
 
 <style>
-	/* Colores base inspirados estrictamente en la identidad del logo */
 	:root {
-		--bg-main: #0B192C;       /* Azul oscuro profundo institucional */
-		--bg-card: #1E3E62;       /* Azul secundario más claro para contraste en tarjetas */
-		--accent-orange: #FF6500; /* Naranja vibrante del logotipo */
-		--text-light: #F8FAFC;    /* Blanco suave para lectura cómoda */
-		--text-muted: #94A3B8;    /* Gris azulado para textos secundarios */
+		--bg-main: #0B192C;
+		--bg-card: #1E3E62;
+		--accent-orange: #FF6500;
+		--text-light: #F8FAFC;
+		--text-muted: #94A3B8;
 	}
 
 	* {
@@ -163,7 +182,7 @@
 	}
 
 	.nav-logo {
-		height: 45px;
+		height: 40px;
 		width: auto;
 		object-fit: contain;
 	}
@@ -185,14 +204,32 @@
 		color: var(--accent-orange);
 	}
 
-	/* Sección Hero con soporte para Carrusel */
+	/* Botón Hamburguesa (oculto en PC) */
+	.menu-toggle {
+		display: none;
+		flex-direction: column;
+		background: none;
+		border: none;
+		cursor: pointer;
+		gap: 5px;
+	}
+
+	.menu-toggle span {
+		width: 25px;
+		height: 3px;
+		background-color: var(--text-light);
+		border-radius: 2px;
+		transition: 0.3s;
+	}
+
+	/* Sección Hero */
 	.hero {
 		height: 90vh;
 		position: relative;
 		display: flex;
 		align-items: center;
 		padding: 0 10%;
-		margin-top: 75px;
+		margin-top: 70px;
 		border-bottom: 3px solid var(--accent-orange);
 		overflow: hidden;
 	}
@@ -229,7 +266,7 @@
 	}
 
 	.sub-title {
-		font-size: 13px;
+		font-size: 12px;
 		letter-spacing: 2px;
 		color: var(--accent-orange);
 		text-transform: uppercase;
@@ -239,7 +276,7 @@
 	}
 
 	.hero-content h1 {
-		font-size: 42px;
+		font-size: 38px;
 		line-height: 1.2;
 		margin-bottom: 20px;
 		font-weight: 700;
@@ -248,7 +285,7 @@
 	}
 
 	.hero-content p {
-		font-size: 16px;
+		font-size: 15px;
 		color: var(--text-muted);
 		margin-bottom: 30px;
 		line-height: 1.6;
@@ -274,41 +311,41 @@
 
 	/* Sección Misión y Visión */
 	.mission-vision {
-		padding: 80px 10%;
+		padding: 60px 8%;
 		background-color: #0d1e35;
 	}
 
 	.mv-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 30px;
 		max-width: 1100px;
 		margin: 0 auto;
 	}
 
 	.mv-card {
 		background-color: var(--bg-card);
-		padding: 35px;
+		padding: 30px;
 		border-radius: 8px;
 		border-top: 4px solid var(--accent-orange);
 		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 	}
 
 	.mv-card h2 {
-		font-size: 24px;
+		font-size: 22px;
 		margin-bottom: 15px;
 		color: var(--text-light);
 	}
 
 	.mv-card p {
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 1.7;
 		color: var(--text-muted);
 	}
 
 	/* Sección Valores */
 	.values-section {
-		padding: 80px 10%;
+		padding: 60px 8%;
 		background-color: var(--bg-main);
 		max-width: 1200px;
 		margin: 0 auto;
@@ -316,15 +353,15 @@
 
 	.values-section h2 {
 		text-align: center;
-		font-size: 32px;
-		margin-bottom: 50px;
+		font-size: 28px;
+		margin-bottom: 40px;
 		color: var(--text-light);
 	}
 
 	.values-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		gap: 25px;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 20px;
 	}
 
 	.value-item {
@@ -333,11 +370,6 @@
 		border-radius: 8px;
 		border-left: 4px solid var(--accent-orange);
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-		transition: transform 0.3s ease;
-	}
-
-	.value-item:hover {
-		transform: translateY(-3px);
 	}
 
 	.value-item.full-width {
@@ -345,7 +377,7 @@
 	}
 
 	.value-item h3 {
-		font-size: 18px;
+		font-size: 17px;
 		margin-bottom: 10px;
 		color: var(--text-light);
 	}
@@ -356,25 +388,25 @@
 		color: var(--text-muted);
 	}
 
-    /* Pie de página y Contacto */
+	/* Pie de página */
 	footer {
 		background-color: #070e18;
 		color: var(--text-muted);
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
-		padding: 60px 10% 20px 10%;
+		padding: 50px 8% 20px 8%;
 	}
 
 	.footer-content {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 40px;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 30px;
 		max-width: 1200px;
-		margin: 0 auto 40px auto;
+		margin: 0 auto 30px auto;
 	}
 
 	.footer-col h3 {
 		color: var(--text-light);
-		font-size: 18px;
+		font-size: 17px;
 		margin-bottom: 15px;
 		border-left: 3px solid var(--accent-orange);
 		padding-left: 10px;
@@ -401,5 +433,55 @@
 		padding-top: 20px;
 		border-top: 1px solid rgba(255, 255, 255, 0.05);
 		font-size: 13px;
+	}
+
+	/* DISEÑO RESPONSIVO PARA CELULARES Y TABLETS (MEDIA QUERIES) */
+	@media (max-width: 768px) {
+		.menu-toggle {
+			display: flex; /* Muestra el botón de hamburguesa en móviles */
+		}
+
+		.nav-links {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			top: 70px;
+			left: 0;
+			width: 100%;
+			background-color: rgba(11, 25, 44, 0.98);
+			padding: 20px 0;
+			text-align: center;
+			border-bottom: 2px solid var(--accent-orange);
+			backdrop-filter: blur(10px);
+		}
+
+		.nav-links.active {
+			display: flex; /* Muestra el menú desplegable al hacer clic */
+		}
+
+		.hero {
+			padding: 0 5%;
+			height: 85vh;
+			text-align: center;
+			align-items: center;
+			/* En celulares ajustamos el degradado para que cubra toda la pantalla de forma uniforme */
+			background: linear-gradient(180deg, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0.92) 100%);
+		}
+
+		.hero-content {
+			max-width: 100%;
+		}
+
+		.hero-content h1 {
+			font-size: 28px; /* Título más compacto para pantallas pequeñas */
+		}
+
+		.hero-content p {
+			font-size: 14px;
+		}
+
+		.mission-vision, .values-section {
+			padding: 40px 5%;
+		}
 	}
 </style>
